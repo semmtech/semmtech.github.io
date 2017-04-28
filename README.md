@@ -1,3 +1,3 @@
 # Semmtech IO
 
-Semmtech Page
+Semmtech Page currently only redirect to the Semmtech homepage.
