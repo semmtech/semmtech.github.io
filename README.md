@@ -1,4 +1,4 @@
-![Semmtech Logo](images/semmtech.png)
+![Semmtech Logo](images/semmtech-logo.png)
 
 # Semmtech IO
 
