@@ -1,0 +1,273 @@
+@base          <http://w3id.org/dsa/> .
+@prefix dsa:   <http://w3id.org/dsa/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+# The 'Data Delivery Agreement vocabulary' ontology:
+dsa:    a            owl:Ontology ;
+        rdfs:label   "Data Sharing Agreements Vocabulary (dsa)" ;
+        rdfs:comment "The DSA ontology provides a structured way for two parties to exchange data." .
+
+
+########## Classes (general) ##########
+
+dsa:ConceptualPhysicalObject
+        a            rdfs:Class ;
+        rdfs:label   "Conceptual physical object"@en ,
+                     "Conceptueel fysiek object"@nl .
+
+dsa:IndividualFunctionalObject
+        a            rdfs:Class ;
+        rdfs:label   "Individual functional object"@en ,
+                     "Individueel functioneel object"@nl .
+
+dsa:Document
+        a            rdfs:Class ;
+        rdfs:label   "Document"@en ,
+                     "Document"@nl .
+
+
+########## Classes (specific to Data Delivery Agreements) ##########
+
+dsa:IndividualMaterialObject
+        a            rdfs:Class ;
+        rdfs:label   "Individual material object"@en ,
+                     "Individueel materieel object"@nl .
+
+dsa:ConceptualProperty
+        a            rdfs:Class ;
+        rdfs:label   "Conceptual property"@en ,
+                     "Conceptueel kenmerk"@nl .
+
+dsa:IndividualProperty
+        a            rdfs:Class ;
+        rdfs:label   "Individual property"@en ,
+                     "Individueel kenmerk"@nl .
+
+dsa:Role
+        a            rdfs:Class ;
+        rdfs:label   "Role"@en ,
+                     "Rol"@nl .
+
+dsa:Unit
+        a            rdfs:Class ;
+        rdfs:label   "Unit"@en ,
+                     "Eenheid"@nl .
+
+dsa:Value
+        a            rdfs:Class ;
+        rdfs:label   "Value"@en ,
+                     "Waarde"@nl .
+
+dsa:Collection
+        a            rdfs:Class ;
+        rdfs:label   "Collection"@en ,
+                     "Collectie"@nl .
+
+
+########## Classes (specific to Distributing contract requirements) ##########
+
+dsa:ConceptualSpecification
+        a            rdfs:Class ;
+        rdfs:label   "Conceptual specification"@en ,
+                     "Conceptuele specificatie"@nl .
+
+dsa:IndividualSpecification
+        a            rdfs:Class ;
+        rdfs:label   "Individual specification"@en ,
+                     "Individuele specificatie"@nl .
+
+
+########## Properties (general) ##########
+# note: below each property, its inverse property is presented (these are commented out though)
+
+dsa:isSpecializationOf
+        a            rdf:Property ;
+        rdfs:label   "is specialization of"@en ,
+                     "is specialisatie van"@nl .
+
+#dsa:isSortFor
+#        a            rdf:Property ;
+#        rdfs:label   "is sort for"@en ,
+#                     "is soort voor"@nl .
+
+dsa:isWholeFor
+        a            rdf:Property ;
+        rdfs:label   "is whole for"@en ,
+                     "is geheel voor"@nl .
+
+#dsa:isPartOf
+#        a            rdf:Property ;
+#        rdfs:label   "is part of"@en ,
+#                     "is onderdeel van"@nl .
+
+dsa:isA
+        a            rdf:Property ;
+        rdfs:label   "is a"@en ,
+                     "is een"@nl .
+
+#dsa:isClassificationOf
+#        a            rdf:Property ;
+#        rdfs:label   "is classification of"@en ,
+#                     "is classificatie van"@nl .
+
+
+########## Properties (specific to Data Delivery Agreements) ##########
+
+dsa:hasProperty
+        a            rdf:Property ;
+        rdfs:label   "has property"@en ,
+                     "heeft eigenschap"@nl .
+
+#dsa:isPropertyOf
+#        a            rdf:Property ;
+#        rdfs:label   "is property of"@en ,
+#                     "is eigenschap van"@nl .
+                     
+dsa:isRoleOf
+        a            rdf:Property ;
+        rdfs:label   "is role of"@en ,
+                     "is rol van"@nl .
+                     
+#dsa:hasRole
+#        a            rdf:Property ;
+#        rdfs:label   "has role"@en ,
+#                     "heeft rol"@nl .
+
+dsa:shallBeQuantifiedOnScale
+        a            rdf:Property ;
+        rdfs:label   "shall be quantified on scale"@en ,
+                     "moet gepresenteerd worden op schaal"@nl .
+
+#dsa:shallBeTheScaleFor
+#        a            rdf:Property ;
+#        rdfs:label   "shall be the scale for"@en ,
+#                     "moet de schaal zijn voor"@nl .
+
+dsa:hasValue
+        a            rdf:Property ;
+        rdfs:label   "has value"@en ,
+                     "heeft waarde"@nl .
+
+#dsa:isValueOf
+#        a            rdf:Property ;
+#        rdfs:label   "is value of"@en ,
+#                     "is waarde van"@nl .
+
+dsa:isCollectionFor
+        a            rdf:Property ;
+        rdfs:label   "is collection for"@en ,
+                     "is collectie voor"@nl .
+
+#dsa:belongsToCollection
+#        a            rdf:Property ;
+#        rdfs:label   "belongs to collection"@en ,
+#                     "behoort tot collectie"@nl .
+
+dsa:isQualificationOf
+        a            rdf:Property ;
+        rdfs:label   "is qualification of"@en ,
+                     "is kwalificatie van"@nl .
+
+#dsa:hasQualification
+#        a            rdf:Property ;
+#        rdfs:label   "has qualification"@en ,
+#                     "heeft kwalificatie"@nl .
+
+dsa:hasOptions
+        a            rdf:Property ;
+        rdfs:label   "has options"@en ,
+                     "heeft opties"@nl .
+
+#dsa:isOptionFor
+#        a            rdf:Property ;
+#        rdfs:label   "is option for"@en ,
+#                     "is optie voor"@nl .
+
+dsa:hasDatatype
+        a            rdf:Property ;
+        rdfs:label   "has as datatype"@en ,
+                     "heeft als datatype"@nl .
+
+#dsa:isDatatypeFor
+#        a            rdf:Property ;
+#        rdfs:label   "is datatype for"@en ,
+#                     "is datatype voor"@nl .
+
+dsa:isDescribedIn
+        a            rdf:Property ;
+        rdfs:label   "is described in"@en ,
+                     "is beschreven in"@nl .
+
+#dsa:includesAsInformation
+#        a            rdf:Property ;
+#        rdfs:label   "includes as information"@en ,
+#                     "omvat als informatie"@nl .
+
+dsa:hasFileLocation
+        a            rdf:Property ;
+        rdfs:label   "has file location"@en ,
+                     "heeft bestandslocatie"@nl .
+
+#dsa:isFileLocationFor
+#        a            rdf:Property ;
+#        rdfs:label   "is file location for"@en ,
+#                     "is bestandslocatie voor"@nl .
+
+
+########## Properties (specific to mapping application records) ##########
+
+dsa:refersTo
+        a           rdf:Property ;
+        rdfs:label  "refers to"@en ,
+                    "refereert naar"@nl .
+
+#dsa:isReferredFrom
+#        a           rdf:Property ;
+#        rdfs:label  "is referred from"@en ,
+#                    "is gerefereerd vanuit"@nl .
+
+dsa:isPresentedOn
+        a           rdf:Property ;
+        rdfs:label  "is presented on"@en ,
+                    "is gepresenteerd op"@nl .
+
+#dsa:isPresentationOf
+#        a           rdf:Property ;
+#        rdfs:label  "is presentation of"@en ,
+#                    "is presentatie van"@nl .
+
+
+########## Properties (specific to distributing contract requirements) ##########
+
+dsa:shallBeCompliantWith
+        a           rdf:Property ;
+        rdfs:label  "shall be compliant with"@en ,
+                    "moet voldoen aan"@nl .
+
+#dsa:isSpecificationFor
+#        a           rdf:Property ;
+#        rdfs:label  "is specification for"@en ,
+#                    "is specificatie voor"@nl .
+
+dsa:isDescribedIn
+        a           rdf:Property ;
+        rdfs:label  "is described in"@en ,
+                    "is beschreven in"@nl .
+
+#dsa:includesInformationAbout
+#        a           rdf:Property ;
+#        rdfs:label  "includes information about"@en ,
+#                    "bevat informatie over"@nl .
+
+dsa:isDerivedFrom
+        a           rdf:Property ;
+        rdfs:label  "is derived from"@en ,
+                    "is afgeleid van"@nl .
+
+#dsa:isOriginalOf
+#        a           rdf:Property ;
+#        rdfs:label  "is original of"@en ,
+#                    "is origineel van"@nl .
